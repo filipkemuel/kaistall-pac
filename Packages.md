@@ -1,6 +1,6 @@
 ## Packages in repo
 
-| ###  amazon-fonts |
+|  amazon-fonts |
 |---------------------|
 | Version:  Mar2020-1 |
 |  Complete set of all Amazon fonts (Bookerly, Amazon Ember) |
@@ -9,7 +9,7 @@
 | Download size:  12.92 MiB |
 | Installed size:  19.72 MiB |
 
-| ###  chrome-gnome-shell |
+|  chrome-gnome-shell |
 |---------------------|
 | Version:  10.1-5 |
 |  Native browser connector for integration with extensions.gnome.org |
@@ -18,7 +18,7 @@
 | Download size:  15.60 KiB |
 | Installed size:  26.49 KiB |
 
-| ###  libt3config |
+|  libt3config |
 |---------------------|
 | Version:  1.0.0-1 |
 |  A library for reading and writing configuration files. |
@@ -27,7 +27,7 @@
 | Download size:  45.69 KiB |
 | Installed size:  136.02 KiB |
 
-| ###  libt3highlight |
+|  libt3highlight |
 |---------------------|
 | Version:  0.5.0-1 |
 |  A syntax highlighting library. |
@@ -36,7 +36,7 @@
 | Download size:  68.24 KiB |
 | Installed size:  234.87 KiB |
 
-| ###  libt3key |
+|  libt3key |
 |---------------------|
 | Version:  0.2.10-1 |
 |  Terminal key sequence database library. |
@@ -45,7 +45,7 @@
 | Download size:  58.40 KiB |
 | Installed size:  242.44 KiB |
 
-| ###  libt3widget |
+|  libt3widget |
 |---------------------|
 | Version:  1.2.0-1 |
 |  A C++ terminal dialog toolkit. |
@@ -54,7 +54,7 @@
 | Download size:  355.23 KiB |
 | Installed size:  1354.29 KiB |
 
-| ###  libt3window |
+|  libt3window |
 |---------------------|
 | Version:  0.4.0-1 |
 |  A library for creating window-based terminal programs. |
@@ -63,7 +63,7 @@
 | Download size:  54.16 KiB |
 | Installed size:  151.71 KiB |
 
-| ###  libtranscript |
+|  libtranscript |
 |---------------------|
 | Version:  0.3.3-1 |
 |  A character set conversion library. |
@@ -72,7 +72,7 @@
 | Download size:  1008.56 KiB |
 | Installed size:  3649.39 KiB |
 
-| ###  ocenaudio-bin |
+|  ocenaudio-bin |
 |---------------------|
 | Version:  3.11.2-1 |
 |  Cross-platform, easy to use, fast and functional audio editor |
@@ -81,7 +81,7 @@
 | Download size:  15.19 MiB |
 | Installed size:  107.57 MiB |
 
-| ###  stylepak-git |
+|  stylepak-git |
 |---------------------|
 | Version:  16.124fbdc-1 |
 |  Automatically install your host GTK+ theme as a Flatpak. Git version. |
@@ -90,7 +90,7 @@
 | Download size:  11.46 KiB |
 | Installed size:  21.36 KiB |
 
-| ###  tilde |
+|  tilde |
 |---------------------|
 | Version:  1.1.2-1 |
 |  An intuitive text editor for the terminal. |
@@ -99,7 +99,7 @@
 | Download size:  137.29 KiB |
 | Installed size:  440.95 KiB |
 
-| ###  ttf-twemoji |
+|  ttf-twemoji |
 |---------------------|
 | Version:  13.1.0-1 |
 |  Twitter Emoji for everyone. |
@@ -108,7 +108,7 @@
 | Download size:  2.56 MiB |
 | Installed size:  3.09 MiB |
 
-| ###  tuner-git |
+|  tuner-git |
 |---------------------|
 | Version:  r227.2247ba4-2 |
 |  An app to discover and listen to internet radio stations |

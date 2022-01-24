@@ -22,7 +22,7 @@ do
 		Name*)
 		[[ $PRINT = "YES" ]] && {
 			echo "" >> Packages.md
-			echo "| ### $(echo ${line} | awk -F: '{print $2}') |" >> Packages.md
+			echo "| $(echo ${line} | awk -F: '{print $2}') |" >> Packages.md
 			echo "|---------------------|" >> Packages.md
 			}
 		;;
