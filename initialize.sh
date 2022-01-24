@@ -22,7 +22,7 @@ sudo git config --system core.editor nano
 git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=32000'
 
-mkdir -p BUILD
+#mkdir -p BUILD
 mkdir -p SOURCE
 mkdir -p PKGBUILDS
 touch .firsttime
@@ -41,5 +41,4 @@ echo "PKGDEST=${SCRIPTPATH}/x86_64"
 echo "SRCDEST=${SCRIPTPATH}/SOURCE"
 echo "PACKAGER=\"Filip Kemuel <filip@kemuel.dk>\""
 echo "GPGKEY=\"YOURGPGKEYHERE\""
-
 

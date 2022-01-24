@@ -2,8 +2,6 @@
 
 SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
-FIRST=1
-
 for AUR_GIT in $(cat "${SCRIPTPATH}/BUILDLIST")
 do
 	PK_NAME=${AUR_GIT/https:\/\/aur.archlinux.org\//}

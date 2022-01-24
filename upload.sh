@@ -4,6 +4,6 @@ git add --all .
 
 git commit -m "Updated Repo"
 
-git push -u origin master
+git push -u origin main
 
 echo "Done"

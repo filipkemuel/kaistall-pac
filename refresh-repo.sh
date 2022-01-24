@@ -9,7 +9,6 @@ rm kaistall-pac*
 
 repo-add -s -n -R kaistall-pac.db.tar.gz *.pkg.tar.zst
 
-read -p "Files added - now clean up"
 
 rm kaistall-pac.db
 rm kaistall-pac.db.sig
