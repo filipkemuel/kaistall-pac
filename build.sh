@@ -9,18 +9,20 @@ do
 	cd "${SCRIPTPATH}/PKGBUILDS/"
 	[[ -d "${PK_NAME}" ]] && {
 		cd ${PK_NAME}
-		package=$(echo $(cat PKGBUILD | awk -F= '/^pkgname|^pkgver|^pkgrel/ {print $2}'))
+		package="${PK_NAME}-$(echo $(cat PKGBUILD | awk -F= '/^pkgver=|^pkgrel=/ {print $2}'))"
 		package=${package// /-}
-		[[ -f "${SCRIPTPATH}/x86_64/${package}-x86_64.pkg.tar.zst" ]] && {
+		if [[ -f "${SCRIPTPATH}/x86_64/${package}-x86_64.pkg.tar.zst" ]]; then
+		    echo  "${package}, has already been built - Skipping!"
+		elif [[ -f "${SCRIPTPATH}/x86_64/${package}-any.pkg.tar.zst" ]]; then
 			echo  "${package}, has already been built - Skipping!"
-		} || {
+		else
 			[[ -f "${SCRIPTPATH}/.firsttime" ]] && {
 				extra-x86_64-build
 				rm ${SCRIPTPATH}/.firsttime
 			} || {
 				makechrootpkg -n -r /var/lib/archbuild/extra-x86_64
 			}
-		}
+		fi
 	} || {
 	  	echo "${PK_NAME} not found!"
 	  	echo "Seems you forgot to run get_builds.sh"
