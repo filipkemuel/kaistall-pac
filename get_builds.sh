@@ -30,8 +30,8 @@ echo ""
 [[ -z "${UPDATED}" ]] || echo -e "UPDATED:\n${UPDATED}\n\n"
 [[ -z "${ADDED}" ]] || {
 echo -e "NEWLY ADDED:\n${ADDED}\n\n"
+cd ${SCRIPTPATH}
  git add --all .
  git commit -m "Added new packages: ${ADDED}"
  git push -u origin main
 }
-echo ""
