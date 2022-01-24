@@ -17,10 +17,12 @@ do
 			echo  "${package}, has already been built - Skipping!"
 		else
 			[[ -f "${SCRIPTPATH}/.firsttime" ]] && {
-				extra-x86_64-build
+				extra-x86_64-build -U kemuel 
+				gpg --detach-sign ${SCRIPTPATH}/x86_64/${package}-*.pkg.tar.zst
 				rm ${SCRIPTPATH}/.firsttime
 			} || {
 				makechrootpkg -n -r /var/lib/archbuild/extra-x86_64
+				gpg --detach-sign ${SCRIPTPATH}/x86_64/${package}-*.pkg.tar.zst
 			}
 		fi
 	} || {
