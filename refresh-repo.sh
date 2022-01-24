@@ -23,3 +23,7 @@ mv kaistall-pac.files.tar.gz kaistall-pac.files
 mv kaistall-pac.files.tar.gz.sig kaistall-pac.files.sig
 
 echo "Done! "
+
+cd "${SCRIPTPATH}"
+
+./generate_packMD.sh
