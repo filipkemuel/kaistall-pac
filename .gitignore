@@ -1,5 +1,6 @@
-/SOURCE/
 /BUILD/
+/SOURCE/
 /LOG/
 /PKGBUILDS/
 /.firsttime
+/scripts/makeENV.sh
