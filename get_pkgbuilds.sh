@@ -33,7 +33,7 @@ echo ""
 echo -e "$(c +B)NEWLY ADDED:$(c -B)\n${ADDED}\n\n"
 cd ${SCRIPTPATH}
 echo -e "$(c +B)Pushing changes to git ..$(c -B)"
-# git add --all .
-# git commit -m "Added new packages: ${ADDED}"
-# git push -u origin main
+git add --all .
+git commit -m "Added new packages: ${ADDED}"
+git push -u origin main
 }
