@@ -25,15 +25,16 @@ cd "${SCRIPTPATH}/PKGBUILDS/"
 		ADDED="${ADDED} ${AUR_PKG}"
 	}
 done
+
+[[ -z "${ADDED}" ]] || {
+	cd ${SCRIPTPATH}
+	echo -e "$(c +B)Pushing changes to git ..$(c -B)"
+	git add --all .
+	git commit -m "Added new packages: ${ADDED}"
+	git push -u origin main
+}
 echo ""
 echo ""
 [[ -z "${UPTODATE}" ]] || echo -e "$(c +B)ALREADY UP TO DATE:$(c -B)\n${UPTODATE}\n\n"
 [[ -z "${UPDATED}" ]] || echo -e "$(c +B)UPDATED:$(c -B)\n${UPDATED}\n\n"
-[[ -z "${ADDED}" ]] || {
-echo -e "$(c +B)NEWLY ADDED:$(c -B)\n${ADDED}\n\n"
-cd ${SCRIPTPATH}
-echo -e "$(c +B)Pushing changes to git ..$(c -B)"
-git add --all .
-git commit -m "Added new packages: ${ADDED}"
-git push -u origin main
-}
+[[ -z "${ADDED}" ]] || echo -e "$(c +B)NEWLY ADDED:$(c -B)\n${ADDED}\n\n"
