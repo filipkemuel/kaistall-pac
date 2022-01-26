@@ -20,21 +20,21 @@
 
 |  chrome-gnome-shell |
 |---------------------|
-| Version:  10.1-5 |
+| Version:  10.1-6 |
 |  Native browser connector for integration with extensions.gnome.org |
 | https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome |
 | Licenses:  GPL |
-| Download size:  15.60 KiB |
+| Download size:  16.44 KiB |
 | Installed size:  26.49 KiB |
 
 |  fastfetch-git |
 |---------------------|
-| Version:  r568.f72ec8a-1 |
+| Version:  r568.f72ec8a-2 |
 |  Like neofetch, but much faster because written in c |
 | https://github.com/LinusDierheimer/fastfetch |
 | Licenses:  MIT |
-| Download size:  100.81 KiB |
-| Installed size:  257.29 KiB |
+| Download size:  101.63 KiB |
+| Installed size:  258.34 KiB |
 
 |  libpamac-nosnap |
 |---------------------|
@@ -99,6 +99,15 @@
 | Download size:  1008.56 KiB |
 | Installed size:  3649.39 KiB |
 
+|  marktext |
+|---------------------|
+| Version:  0.16.3-3 |
+|  A simple and elegant open-source markdown editor that focused on speed and usability |
+| https://marktext.app |
+| Licenses:  MIT |
+| Download size:  28.98 MiB |
+| Installed size:  109.10 MiB |
+
 |  ocenaudio-bin |
 |---------------------|
 | Version:  3.11.2-1 |
@@ -123,7 +132,7 @@
 |  Automatically install your host GTK+ theme as a Flatpak. Git version. |
 | https://github.com/refi64/stylepak |
 | Licenses:  None |
-| Download size:  11.46 KiB |
+| Download size:  12.86 KiB |
 | Installed size:  21.36 KiB |
 
 |  tilde |
@@ -150,5 +159,5 @@
 |  An app to discover and listen to internet radio stations |
 | https://github.com/louis77/tuner |
 | Licenses:  GPL3 |
-| Download size:  131.16 KiB |
+| Download size:  131.43 KiB |
 | Installed size:  544.41 KiB |
