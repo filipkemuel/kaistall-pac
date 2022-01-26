@@ -19,7 +19,7 @@ With packages built from AUR that I need on my machines.
    [kaistall-pac]
    Server = https://filipkemuel.github.io/$repo/$arch
    ```
-   Do ad it under the official repo's so that it has lower priority than the official repo's.
+   Do add it belo the official repo's so that it has lower priority than the official repo's.
 
 3) Update the pacman repo caches
    ```Shell
