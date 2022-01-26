@@ -9,6 +9,15 @@
 | Download size:  12.92 MiB |
 | Installed size:  19.72 MiB |
 
+|  apostrophe |
+|---------------------|
+| Version:  2.5-1 |
+|  A distraction free Markdown editor for GNU/Linux made with GTK+ |
+| https://world.pages.gitlab.gnome.org/apostrophe |
+| Licenses:  GPL3 |
+| Download size:  2.41 MiB |
+| Installed size:  2.89 MiB |
+
 |  archlinux-appstream-data-pamac |
 |---------------------|
 | Version:  20220107-1 |

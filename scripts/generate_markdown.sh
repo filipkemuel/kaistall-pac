@@ -64,7 +64,7 @@ do
 		;;
 
 	esac
-	done < <(LANG=en_US.UTF-8 pacman -Si "$package" | awk '/Repos|Name|Version|Description|URL|Licenses|Download Size|Installed Size/')
+	done < <(LANG=en_US.UTF-8 pacman --config ${SCRIPTPATH}/pacman.conf -Si "$package" | awk '/Repos|Name|Version|Description|URL|Licenses|Download Size|Installed Size/')
 done
 
 echo " "
