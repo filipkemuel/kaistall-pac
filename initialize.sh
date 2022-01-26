@@ -18,40 +18,40 @@ sleep 1
 echo -e "\nSetting up git..."
 sleep 1
 echo git config --global pull.rebase false
-# git config --global pull.rebase false
+git config --global pull.rebase false
 sleep 1
 echo git config --global push.default simple
-# git config --global push.default simple
+git config --global push.default simple
 sleep 1
 echo git config --global user.name "$NAME"
-# git config --global user.name "$NAME"
+git config --global user.name "$NAME"
 sleep 1
 echo git config --global user.email "$EMAIL"
-# git config --global user.email "$EMAIL"
+git config --global user.email "$EMAIL"
 sleep 1
 echo sudo git config --system core.editor $EDITOR
-# sudo git config --system core.editor $EDITOR
+sudo git config --system core.editor $EDITOR
 sleep 1
 echo git config --global credential.helper 'cache --timeout=32000'
-# git config --global credential.helper 'cache --timeout=32000'
+git config --global credential.helper 'cache --timeout=32000'
 sleep 1
 
 echo -e "\nMaking folders..."
 sleep 1
 echo "mkdir -p BUILD"
-# mkdir -p BUILD
+mkdir -p BUILD
 sleep 1
 echo "mkdir -p SOURCE"
-# mkdir -p SOURCE
+mkdir -p SOURCE
 sleep 1
 echo "mkdir -p LOG"
-# mkdir -p LOG
+mkdir -p LOG
 sleep 1
 echo "mkdir -p PKGBUILDS"
-# mkdir -p PKGBUILDS
+mkdir -p PKGBUILDS
 sleep 1
 echo "touch .firsttime"
-# touch .firsttime
+touch .firsttime
 sleep 1
 
 BUILDDIR="${SCRIPTPATH}/BUILD"

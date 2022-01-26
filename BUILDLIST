@@ -10,8 +10,9 @@ ocenaudio-bin
 ttf-twemoji
 tuner-git
 stylepak-git
-chrome-gnome-shell
 archlinux-appstream-data-pamac
 libpamac-nosnap
 pamac-nosnap
 fastfetch-git
+marktext
+chrome-gnome-shell

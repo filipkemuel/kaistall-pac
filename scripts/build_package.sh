@@ -95,7 +95,7 @@ echo ""
 		for PACage in ${pkgname[@]}
 		do
 			echo -e"$(c +B)Signing ${PACage}...$(c -B)"
-			gpg --default-key ${GPG_KEY} \
+			gpg --default-key ${GPG_KEY} --yes --batch \
 			--detach-sign "${Qpath}x86_64/${PACage}-${PACepoch}${PACver}-${PACrel}-${PACarch}.${Qext}"
 		done
 	} || {
