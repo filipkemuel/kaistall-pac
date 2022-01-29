@@ -11,7 +11,7 @@
 
 | apostrophe                                                      |
 | --------------------------------------------------------------- |
-| Version:  2.5-1                                                 |
+| Version:  2.5-2                                                 |
 | A distraction free Markdown editor for GNU/Linux made with GTK+ |
 | https://world.pages.gitlab.gnome.org/apostrophe                 |
 | Licenses:  GPL3                                                 |
@@ -33,7 +33,7 @@
 | A markup language for GTK user interfaces                  |
 | https://jwestman.pages.gitlab.gnome.org/blueprint-compiler |
 | Licenses:  LGPL3                                           |
-| Download size:  73.74 KiB                                  |
+| Download size:  73.77 KiB                                  |
 | Installed size:  263.00 KiB                                |
 
 | chrome-gnome-shell                                                 |
@@ -56,12 +56,21 @@
 
 | fastfetch-git                                       |
 | --------------------------------------------------- |
-| Version:  r568.f72ec8a-2                            |
+| Version:  r569.7ad73d3-1                            |
 | Like neofetch, but much faster because written in c |
 | https://github.com/LinusDierheimer/fastfetch        |
 | Licenses:  MIT                                      |
-| Download size:  101.63 KiB                          |
-| Installed size:  258.34 KiB                         |
+| Download size:  102.94 KiB                          |
+| Installed size:  257.29 KiB                         |
+
+| floodlight-presenter                                                     |
+| ------------------------------------------------------------------------ |
+| Version:  0.10.1-1                                                       |
+| Presentation and lyrics program for churches to display lyrics and media |
+| https://floodlight.gitlab.io/                                            |
+| Licenses:  GPL3                                                          |
+| Download size:  318.26 KiB                                               |
+| Installed size:  1005.96 KiB                                             |
 
 | ghostwriter-git                                              |
 | ------------------------------------------------------------ |
@@ -159,7 +168,7 @@
 | Cross-platform, easy to use, fast and functional audio editor |
 | https://www.ocenaudio.com/                                    |
 | Licenses:  custom                                             |
-| Download size:  15.19 MiB                                     |
+| Download size:  2.63 MiB                                      |
 | Installed size:  107.57 MiB                                   |
 
 | pamac-nosnap                                                  |

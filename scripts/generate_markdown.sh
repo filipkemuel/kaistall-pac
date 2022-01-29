@@ -13,6 +13,8 @@ echo -e "$(c +B)Generating markdown-file.. $(c -B)."
 
 echo "## Packages in repo" > ${Qpath}/Packages.md
 
+sudo pacman --config ${SCRIPTPATH}/pacman.conf -Syy
+
 for package in $(pacman --config ${SCRIPTPATH}/pacman.conf -Sl ${REPONAME} | awk '{print $2}')
 do
 	while read -r line
@@ -67,6 +69,8 @@ do
 	esac
 	done < <(LANG=en_US.UTF-8 pacman --config ${SCRIPTPATH}/pacman.conf -Si "$package" | awk '/Repos|Name|Version|Description|URL|Licenses|Download Size|Installed Size/')
 done
+
+sudo pacman -Syy
 
 echo " "
 echo -e "$(c +G)DONE!$(c -G)"
