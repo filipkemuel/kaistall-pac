@@ -5,17 +5,17 @@ SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
 cd "${SCRIPTPATH}/x86_64"
 
-maxSize=10000000
+maxSize=100000000
 
 for file in *.pkg.tar.zst
 do
 	mySize=$(stat -c%s ${file})
-	(( mySize > maxSize )) && {
-		echo "${file} is too big for the repo: $(eval ${mySize} / 100000 )Mb"
-		echo "Max size is 100Mb!"
+	if (( mySize > maxSize )) ; then
+		echo "${file} is too big for the repo: $(expr ${mySize} / 1000000 )Mb"
+		echo "Max size is $(expr ${maxSize} / 1000000 )!"
 		echo "You need to remove it!"
 		exit 1
-	}
+	fi
 done
 
 rm kaistall-pac*
