@@ -11,42 +11,87 @@ PACrolling=0
 BUILD=0
 
 function get_ver {
+# Check if it's a rolling package !
 while read -r line
-	do
+do
 	case "${line}" in
 		pkgver\(\)*)
-			PACrolling=1
-		;;
-		pkgname*)
-			eval ${line}
-		;;
-		pkgver*)
-			[[ -z "${PACver}" ]] && PACver=${line/pkgver=/}
-		;;
-		pkgrel*)
-			PACrel=${line/pkgrel=/}
-		;;
-		epoch*)
-			PACepoch=${line/epoch=}
-		;;
-		arch*)
-		    [[ "$line" =~ x86_64 ]] && PACarch="x86_64" || {
-			[[ "$line" =~ any ]] && PACarch="any" || {
-				echo -e "$(c +R)Oh, this package can't be build here$(c .R)"
-				theArch=${line/arch=\(}
-				theArch=${theArch/\)/}
-				echo -e "$(c +R)It's ment for ${theArch} $(c -R)"
-				exit 1 
-			} }
+		echo "$(c +Y)Oh, It's a rolling package!$(c -Y)"
+			echo "$(c +B)We need to fetch sources, run prepare() and then pkgver() to get the proper version!$(c -B)"
+			echo ""
+			cd ${Qpath}PKGBUILDS/${Qpackage}
+			makechrootpkg -r /var/lib/archbuild/extra-x86_64 -- --nobuild 
+			[[ $? = 0 ]] || {
+				echo "$(c +R)Refreshing sources exited with an error!$(c -R)"
+				exit 1
+			}
 		;;
 	esac
-	
-	done< <(cat ${Qpath}PKGBUILDS/${Qpackage}/PKGBUILD | awk '/^epoch|^pkgver|^pkgrel|^pkgname|^arch/')
+done< <(cat ${Qpath}PKGBUILDS/${Qpackage}/PKGBUILD | awk '/^pkgver/')
 
 
-	[[ -z "${PACepoch}" ]] || PACepoch="${PACepoch}:"
+# This way only worked if there was no variables in the name or version
+# while read -r line
+# do
+# 	case "${line}" in
+# 		pkgname*)
+# 			pkgname=${line/pkgname=/}
+# 		;;
+# 		pkgver\=*)
+# 			pkgver=${line/pkgver=/}
+# 		;;
+# 		pkgrel*)
+# 			pkgrel=${line/pkgrel=/}
+# 		;;
+# 		epoch*)
+# 			pkgepoch=${line/epoch=}
+# 		;;
+# 		arch*)
+# 		    [[ "$line" =~ x86_64 ]] && arch="x86_64" || {
+# 			[[ "$line" =~ any ]] && arch="any" || {
+# 				echo -e "$(c +R)Oh, this package can't be build here$(c .R)"
+# 				theArch=${line/arch=\(}
+# 				theArch=${theArch/\)/}
+# 				echo -e "$(c +R)It's ment for ${theArch} $(c -R)"
+# 				exit 1 
+# 			} }
+# 		;;
+# 	esac
+# done< <(cat ${Qpath}PKGBUILDS/${Qpackage}/PKGBUILD | awk '/^epoch|^pkgver|^pkgrel|^pkgname|^arch/')
+
+# New version - this seems potetially dangerous though since we are sourcing an "unknown script"
+# TODO: Might be a good idea to setup some sort of jail around this
+
+cd ${Qpath}PKGBUILDS/${Qpackage}
+source PKGBUILD
+
+
+[[ -z "${epoch}" ]] || epoch="${epoch}:"
+
+for testArch in "${arch[@]}"; do
+	case $testArch in
+		any)
+			[[ -z "${theArch}" ]] && theArch="any"
+		;;
+		x86_64)
+			theArch="x86_64"
+		;;
+		*)
+			[[ -z "${otherArch}" ]] && otherArch="${testArch}" || otherArch="and ${testArch}"
+		;;
+	esac
+done
+
+[[ -z "${theArch}" ]] && {
+	echo -e "$(c +R)Oh, this package can't be build here$(c .R)"
+	echo -e "$(c +R)It's ment for ${otherArch} $(c -R)"
+	exit 1 
 }
 
+}
+
+echo ""
+echo "$(c +B)Looking op version information on ${Qpackage}..$(c -B)"
 echo ""
 
 [[ -f "${Qpath}PKGBUILDS/${Qpackage}/PKGBUILD" ]] && {
@@ -56,15 +101,9 @@ echo ""
     i=1
 	for PACage in ${pkgname[@]}
 	do
-		echo "PACKAGE (${i}): ${PACage}-${PACepoch}${PACver}-${PACrel}-${PACarch}.${Qext}"
-		[[ -f "${Qpath}x86_64/${PACage}-${PACepoch}${PACver}-${PACrel}-${PACarch}.${Qext}" ]] && {
-			[[ $PACrolling = 1 ]] && {
-				echo -e "$(c +G)Already built!$(c -G)"
-				echo -e "$(c +Y)But since version is updated on build we probably should build again!$(c -Y)"
-				BUILD=1
-			} || {
-				echo -e "$(c +G)Already built!$(c -G)"
-			}
+		echo "PACKAGE (${i}): ${PACage}-${epoch}${pkgver}-${pkgrel}-${theArch}.${Qext}"
+		[[ -f "${Qpath}x86_64/${PACage}-${epoch}${pkgver}-${pkgrel}-${theArch}.${Qext}" ]] && {
+			echo -e "$(c +G)Already built!$(c -G)"
 		} || { 
 			echo -e "$(c +G)Not built, let's do this$(c -G)"
 			BUILD=1
@@ -90,13 +129,12 @@ echo ""
 		success=$?
 	}
 	[[ $success = 0 ]] && {
-		[[ $PACrolling = 1 ]] && get_ver
 		echo ""
 		for PACage in ${pkgname[@]}
 		do
 			echo -e"$(c +B)Signing ${PACage}...$(c -B)"
 			gpg --default-key ${GPG_KEY} --yes --batch \
-			--detach-sign "${Qpath}x86_64/${PACage}-${PACepoch}${PACver}-${PACrel}-${PACarch}.${Qext}"
+			--detach-sign "${Qpath}x86_64/${PACage}-${epoch}${pkgver}-${pkgrel}-${theArch}.${Qext}"
 		done
 	} || {
 		echo -e "$(c +R)Build finished with errors!$(c -R)"

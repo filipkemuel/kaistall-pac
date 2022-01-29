@@ -24,7 +24,4 @@ mv kaistall-pac.files.tar.gz.sig kaistall-pac.files.sig
 
 echo "Done! "
 
-cd "${SCRIPTPATH}"
-cd scripts
-
-./generate_markdown.sh
+${SCRIPTPATH}/scripts/generate_markdown.sh

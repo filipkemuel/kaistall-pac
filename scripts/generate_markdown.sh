@@ -2,15 +2,16 @@
 
 SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
+source ${SCRIPTPATH}/utils.sh
+
 Qpath="$( cd -- "${SCRIPTPATH}/.." >/dev/null 2>&1 ; pwd -P )"
 
-source ${SCRIPTPATH}/utils.sh
 
 REPONAME="kaistall-pac"
 
 echo -e "$(c +B)Generating markdown-file.. $(c -B)."
 
-echo "## Packages in repo" > Packages.md
+echo "## Packages in repo" > ${Qpath}/Packages.md
 
 for package in $(pacman --config ${SCRIPTPATH}/pacman.conf -Sl ${REPONAME} | awk '{print $2}')
 do
@@ -29,7 +30,7 @@ do
 		[[ $PRINT = "YES" ]] && {
 			echo "" >> ${Qpath}/Packages.md
 			echo "| $(echo ${line} | awk -F: '{print $2}') |" >> ${Qpath}/Packages.md
-			echo "|---------------------|" >> Packages.md
+			echo "|---------------------|" >> ${Qpath}/Packages.md
 			}
 		;;
 		Version*)
