@@ -29,12 +29,12 @@
 
 |  blueprint-compiler-git |
 |---------------------|
-| Version:  r112.76f7bef-1 |
+| Version:  r118.bac0082-1 |
 |  A markup language for GTK user interfaces |
 | https://jwestman.pages.gitlab.gnome.org/blueprint-compiler |
 | Licenses:  LGPL3 |
-| Download size:  73.77 KiB |
-| Installed size:  263.00 KiB |
+| Download size:  76.42 KiB |
+| Installed size:  272.78 KiB |
 
 |  chrome-gnome-shell |
 |---------------------|
@@ -119,21 +119,21 @@
 
 |  libt3widget |
 |---------------------|
-| Version:  1.2.0-1 |
+| Version:  1.2.1-1 |
 |  A C++ terminal dialog toolkit. |
 | http://os.ghalkes.nl/t3/libt3widget.html |
 | Licenses:  GPL3 |
-| Download size:  355.23 KiB |
-| Installed size:  1354.29 KiB |
+| Download size:  362.03 KiB |
+| Installed size:  1354.50 KiB |
 
 |  libt3window |
 |---------------------|
-| Version:  0.4.0-1 |
+| Version:  0.4.1-1 |
 |  A library for creating window-based terminal programs. |
 | http://os.ghalkes.nl/t3/libt3window.html |
 | Licenses:  GPL3 |
-| Download size:  54.16 KiB |
-| Installed size:  151.71 KiB |
+| Download size:  59.73 KiB |
+| Installed size:  151.91 KiB |
 
 |  libtranscript |
 |---------------------|
@@ -191,12 +191,12 @@
 
 |  tilde |
 |---------------------|
-| Version:  1.1.2-1 |
+| Version:  1.1.3-1 |
 |  An intuitive text editor for the terminal. |
 | http://os.ghalkes.nl/tilde.html |
 | Licenses:  GPL3 |
-| Download size:  137.29 KiB |
-| Installed size:  440.95 KiB |
+| Download size:  142.39 KiB |
+| Installed size:  441.09 KiB |
 
 |  ttf-twemoji |
 |---------------------|
