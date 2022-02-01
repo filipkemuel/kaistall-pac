@@ -27,15 +27,6 @@
 | Download size:  18.74 MiB |
 | Installed size:  20.03 MiB |
 
-|  blueprint-compiler-git |
-|---------------------|
-| Version:  r118.bac0082-1 |
-|  A markup language for GTK user interfaces |
-| https://jwestman.pages.gitlab.gnome.org/blueprint-compiler |
-| Licenses:  LGPL3 |
-| Download size:  76.42 KiB |
-| Installed size:  272.78 KiB |
-
 |  chrome-gnome-shell |
 |---------------------|
 | Version:  10.1-6 |
@@ -119,12 +110,12 @@
 
 |  libt3widget |
 |---------------------|
-| Version:  1.2.1-1 |
+| Version:  1.2.2-1 |
 |  A C++ terminal dialog toolkit. |
 | http://os.ghalkes.nl/t3/libt3widget.html |
 | Licenses:  GPL3 |
-| Download size:  362.03 KiB |
-| Installed size:  1354.50 KiB |
+| Download size:  360.91 KiB |
+| Installed size:  1354.64 KiB |
 
 |  libt3window |
 |---------------------|
