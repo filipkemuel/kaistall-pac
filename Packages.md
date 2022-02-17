@@ -38,21 +38,21 @@
 
 |  extension-manager |
 |---------------------|
-| Version:  0.2.1-1 |
+| Version:  0.2.2-1 |
 |  A native tool for browsing, installing, and managing GNOME Shell Extensions |
 | https://github.com/mjakeman/extension-manager |
 | Licenses:  GPL3 |
-| Download size:  62.74 KiB |
-| Installed size:  225.94 KiB |
+| Download size:  71.02 KiB |
+| Installed size:  270.19 KiB |
 
 |  fastfetch-git |
 |---------------------|
-| Version:  r569.7ad73d3-1 |
+| Version:  r599.ed63ef1-1 |
 |  Like neofetch, but much faster because written in c |
 | https://github.com/LinusDierheimer/fastfetch |
 | Licenses:  MIT |
-| Download size:  102.94 KiB |
-| Installed size:  257.29 KiB |
+| Download size:  106.88 KiB |
+| Installed size:  265.47 KiB |
 
 |  floodlight-presenter |
 |---------------------|
@@ -155,12 +155,12 @@
 
 |  ocenaudio-bin |
 |---------------------|
-| Version:  3.11.2-1 |
+| Version:  3.11.5-1 |
 |  Cross-platform, easy to use, fast and functional audio editor |
 | https://www.ocenaudio.com/ |
 | Licenses:  custom |
-| Download size:  2.63 MiB |
-| Installed size:  107.57 MiB |
+| Download size:  14.99 MiB |
+| Installed size:  107.18 MiB |
 
 |  pamac-nosnap |
 |---------------------|
@@ -200,9 +200,9 @@
 
 |  tuner-git |
 |---------------------|
-| Version:  r227.2247ba4-1 |
+| Version:  r235.ffdebf0-1 |
 |  An app to discover and listen to internet radio stations |
 | https://github.com/louis77/tuner |
 | Licenses:  GPL3 |
-| Download size:  131.43 KiB |
-| Installed size:  544.41 KiB |
+| Download size:  133.37 KiB |
+| Installed size:  544.69 KiB |
